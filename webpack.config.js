@@ -8,7 +8,7 @@ module.exports = {
 
   entry: {
     javascript: "./app/index.js",
-    html: "./app/app.html"
+    html: "./app/index.html"
   },
 
   output: {
