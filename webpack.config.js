@@ -7,7 +7,7 @@ const cssNamingTemplate = process.env.NODE_ENV === "production" ?
 module.exports = {
 
   entry: {
-    // serviceWorker: "./app/service_workers/service-worker.static.js",
+    worker: "./app/service_workers/service-worker.static.js",
     config: "./app/config/manifest.json",
     bundle: "./app/app.js",
     html: "./app/index.html",

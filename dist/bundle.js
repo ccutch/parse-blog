@@ -58,6 +58,8 @@
 
 	var _Application2 = _interopRequireDefault(_Application);
 
+	__webpack_require__(160);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	_reactDom2.default.render(_react2.default.createElement(_Application2.default, null), document.getElementById("main"));
@@ -19706,6 +19708,18 @@
 	})(_react2.default.Component);
 
 	exports.default = Application;
+
+/***/ },
+/* 160 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	// Mount service workers
+
+	if ("serviceWorker" in navigator) {
+	  navigator.serviceWorker.register("./service-worker.js");
+	}
 
 /***/ }
 /******/ ]);
