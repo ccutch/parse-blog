@@ -1,0 +1,11 @@
+@value body: red;
+
+
+:global body {
+  margin: 0;
+  background: body;
+}
+
+.application {
+
+}
