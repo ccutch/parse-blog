@@ -1,0 +1,8 @@
+{
+  "name": "Simple App",
+  "short_name": "Simple",
+  "icons": [],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "gcm_sender_id": "587945332074"
+}
