@@ -88,8 +88,6 @@
 
 	// React time
 
-	console.log(_application2.default);
-
 	var Application = (function (_React$Component) {
 	  _inherits(Application, _React$Component);
 
@@ -104,7 +102,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        "h1",
-	        null,
+	        { className: _application2.default.header },
 	        "Application"
 	      );
 	    }
@@ -29888,8 +29886,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:15]!./application.css", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?modules&localIdentName=[name]__[local]___[hash:base64:15]!./application.css");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?modules&localIdentName=file-[name]___class-[local]___production-[hash:base64:15]!./application.css", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?modules&localIdentName=file-[name]___class-[local]___production-[hash:base64:15]!./application.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -29907,12 +29905,12 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  margin: 0;\n  background: red;\n}\n\n.application__application___19YClAdrVvrBTWg {\n\n}\n", ""]);
+	exports.push([module.id, "body {\n  margin: 0;\n  background: red;\n}\n\n.file-application___class-header___production-2-tyYUCT23Of6fO {\n  color: blue;\n}\n", ""]);
 
 	// exports
 	exports.locals = {
 		"body": "red",
-		"application": "application__application___19YClAdrVvrBTWg"
+		"header": "file-application___class-header___production-2-tyYUCT23Of6fO"
 	};
 
 /***/ },

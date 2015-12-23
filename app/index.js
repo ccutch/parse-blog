@@ -21,14 +21,13 @@ console.log(Parse.Session)
 // React time
 import React from "react"
 import ReactDOM from "react-dom"
-import applicationStyles from "./styles/application.css"
+import styles from "./styles/application.css"
 
-console.log(applicationStyles)
 
 class Application extends React.Component {
   render() {
     return (
-      <h1>
+      <h1 className={styles.header}>
         Application
       </h1>
     );

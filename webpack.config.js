@@ -1,4 +1,7 @@
 
+const cssNamingTemplate = process.env.NODE_ENV === "production" ?
+                            "[hash:base64:15]" :
+                            "file-[name]___class-[local]___production-[hash:base64:15]"
 
 
 module.exports = {
@@ -23,7 +26,7 @@ module.exports = {
 
       {
         test: /\.css$/,
-        loader: "style!css?modules&localIdentName=[name]__[local]___[hash:base64:15]",
+        loader: "style!css?modules&localIdentName=" + cssNamingTemplate,
         exclude: /node_modules/
       },
 
@@ -33,8 +36,4 @@ module.exports = {
       }
     ]
   }
-
-
-
-
 }
