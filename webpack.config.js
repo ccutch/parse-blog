@@ -7,17 +7,32 @@ const cssNamingTemplate = process.env.NODE_ENV === "production" ?
 module.exports = {
 
   entry: {
-    javascript: "./app/index.js",
-    html: "./app/index.html"
+    // serviceWorker: "./app/service_workers/service-worker.static.js",
+    config: "./app/config/manifest.json",
+    bundle: "./app/app.js",
+    html: "./app/index.html",
   },
 
   output: {
-    filename: "bundle.js",
+    filename: "[name].js",
     path: `${__dirname}/dist`
+  },
+
+  resolve: {
+    modulesDirectories: [
+      "node_modules",
+      "app"
+    ]
   },
 
   module: {
     loaders: [
+      {
+        test: /\.static\.js$/,
+        loaders: ["file?name=service-worker.js", "babel"],
+        exclude: /node_modules/
+      },
+
       {
         test: /\.js$/,
         loader: "babel",
@@ -32,6 +47,11 @@ module.exports = {
 
       {
         test: /\.html$/,
+        loader: "file?name=[name].[ext]",
+      },
+
+      {
+        test: /\.json$/,
         loader: "file?name=[name].[ext]",
       }
     ]
