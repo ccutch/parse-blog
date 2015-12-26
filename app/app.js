@@ -2,7 +2,7 @@
 
 // Parse init
 import Parse from "parse"
-import { parse_application_id, parse_javascript_key } from "config/keys"
+import { parse_application_id, parse_javascript_key } from "config/constants"
 
 Parse.initialize(parse_application_id, parse_javascript_key)
 
