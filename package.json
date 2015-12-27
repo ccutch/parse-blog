@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "webpack": "node_modules/.bin/webpack"
+    "webpack": "node_modules/.bin/webpack",
+    "gh-pages": "node_modules/.bin/gh-pages"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js",
-    "start": "http-server -p 5150 dist/"
+    "start": "http-server -p 5150 dist/",
+    "publish": "npm run build; gh-pages -d dist -r git@github.com:ccutch/ccutch.github.io.git -b master"
   },
   "author": "",
   "license": "ISC",
@@ -18,9 +20,11 @@
     "babel-plugin-transform-runtime": "^6.3.13",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
+    "history": "^1.17.0",
     "parse": "^1.6.13",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
+    "react-router": "^1.0.3",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.9"
   },
