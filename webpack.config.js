@@ -15,7 +15,8 @@ module.exports = {
 
   output: {
     filename: "[name].js",
-    path: `${__dirname}/dist`
+    path: `${__dirname}/dist`,
+    publicPath: "/",
   },
 
   resolve: {
@@ -53,7 +54,19 @@ module.exports = {
       {
         test: /\.json$/,
         loader: "file?name=[name].[ext]",
-      }
+      },
+
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+          'file?hash=sha512&digest=hex&name=[hash].[ext]',
+          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
+      },
+      /* {
+        test: /\.svg$/,
+        loader: 'svg-inline'
+      },*/
     ]
   }
 }

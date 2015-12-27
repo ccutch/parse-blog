@@ -1,0 +1,101 @@
+@value gray, red, mid-gray, dark-gray, pink, blue from "./colors.css";
+@value checkbox_label from "./basics";
+
+
+:global(body) {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.body_container {
+  display: flex;
+}
+
+.header {
+  background: blue;
+  padding: 0 1rem;
+  display: flex;
+  font-size: 0.6rem;
+  align-items: center;
+}
+
+.nav_expand {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  padding-top: 1.5px;
+  cursor: pointer;
+}
+
+.nav_expand span {
+  display: block;
+  height: 2px;
+  background-color: white;
+  width: 17px;
+  margin: 0 0 3px;
+  border-radius: 2px;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+}
+
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100vh;
+  background-color: dark-gray;
+  align-items: center;
+  margin: 0; padding: 0;
+}
+
+.mark {
+  height: 100px;
+  width: 100px;
+  border: 1px solid gray;
+  background-color: red;
+  margin: 25px 0 10px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.mark:before {
+  content: "C";
+  color: gray;
+  font-size: 3rem;
+  width: 100%;
+}
+
+.nav li {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  font-size: 1.2rem;
+  padding-left: 20px;
+  width: calc(100% - 20px);
+  color: gray;
+  cursor: pointer;
+}
+
+.nav li.active {
+  background: mid-gray;
+}
+
+.nav img {
+  margin-right: 15px;
+}
+
+.name {
+  color: gray;
+  font-size: 1.2rem;
+}
+
+
+.content {
+  padding: 15px;
+}
